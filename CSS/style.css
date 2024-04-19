@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body {
+    background-color: #D4D4D4;
+    font-family: "Inter", sans-serif;
+    overflow-y: hidden;
+    animation: intro 1s ease;
+}
+
+@keyframes intro {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 14px;
+    gap: 50px;
+    
+    position: absolute;
+    width: 60px;
+    height: 110vh;
+    left: 0px;
+    top: 0px;
+    
+    background: #32449C;
+}
+
+.icons {
+    background-color: transparent;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav .icons i {
+    color: white;
+    background-color: transparent;
+    font-size: 30px;
+    margin-top: 2rem;
+}
+
+.nav .icons i:hover {
+    color: #EF8B16;
+    transition: ease .8s;
+}
+
+.nav .icons .arrow {
+    margin-left: 10px;
+    margin-top: -10px;
+}
+
+.nav .icons .arrow-group {
+    background-color: transparent;
+}
+
+.nav .icons .arrow-group i {
+    color: white;
+    background-color: transparent;
+    font-size: 30px;
+}
+
+.nav .icons .arrow-group:hover i {
+    color: #EF8B16;
+    transition: ease .8s;
+}
+
+.box-row1 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    width: 1rem;
+}
+
+.box-row2 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+.boxes {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px 8px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 61px;
+    width: 250px;
+    height: 250px;
+    background: #F9F9F9;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin-right: 70px;
+}
+
+@keyframes enlargedd-in {
+    from { width: 250px; }
+    25% { width: 230px; }
+    to { width: 482px; }
+}
+
+@keyframes enlargedd-out {
+    from { width: 482px; }
+    25% { width: 520px; }
+    to { width: 250px;}
+}
+
+
+.boxes.enlarged {
+    animation: enlargedd-in 0.6s ease forwards;
+    border-color: #EF8B16;
+    border-style: solid;
+}
+
+.boxes.shrunken {
+    animation: enlargedd-out 0.6s ease forwards;
+}
+
+.boxes:hover {
+    background: #E9E9E9;
+    transition: ease .5s;
+}
+
+.pdfimage {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    margin-top: 30px;
+    margin-left: 15px;
+}
+
+.mergeimage {
+    width: 30px;
+    height: 30px;
+    margin-top: 35px;
+    margin-left: 10px;
+    margin-right: -9px;
+    background-color: transparent;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: transparent;
+}
+
+.lbltitle {
+    background-color: transparent;
+    margin-top: 90px;
+    margin-left: -120px;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    color: #383838;
+    width: 10rem;
+}
+
+.lbldesc {
+    background-color: transparent;
+    font-size: 12px;
+    margin-left: -7.5rem;
+    margin-top: 2rem;
+    font-family: "Inter", sans-serif;
+    color: #555555;
+    max-width: 300px;
+}
+
+.lbldesc.fadein{
+    animation: goUp .4s ease-in forwards;
+}
+
+.lbldesc.fadeout {
+    animation: goDown .4s ease-out forwards;
+}
+
+.next.fadeout {
+    animation: goRight .4s ease-out forwards;
+    transform: translateY(-20px);
+}
+
+.next {
+    background-color: transparent;
+    font-size: 20px;
+    color: black;
+    margin-left: 170px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; 
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes goUp {
+    from {
+        transform: translateY(20px);
+    }
+    to {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes goDown {
+    from {
+        transform: translateY(-20px);
+    }
+    to {
+        transform: translateY(20px);
+    }
+}
+
+.btnselect {
+    background: #EA2929;
+    border-radius: 8px;
+    width: 160px;
+    height: 40px;
+    border-style: none;
+    color: #F9F9F9;
+    font-family: "Inter", sans-serif;
+    margin-top: 7rem;
+    margin-left: 5rem;
+    cursor: pointer;
+    min-width: 135px;
+}
+
+.btnselect.fadein {
+    animation: fadeIn  1s ease-in ;
+}
+
+.htmlSelect.fadein {
+    animation: fadeIn  1s ease-in ;
+}
+
+.lbladd.fadein {
+    animation: fadeIn 1s ease forwards;
+}
+
+.selected-file, 
+.selected-file-split, 
+.selected-file-img,
+.selected-file-docs,
+.selected-file-html,
+.selected-file-excel {
+    background-color: transparent;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.file-name-container-merge {
+    font-size: 10px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 8px 8px 16px;
+    gap: 16px;
+    background-color: #F9F9F9;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    width: 205.58px;
+    height: 45px;
+    margin-left: 2rem;
+}
+
+.file-name-container, 
+.file-name-container-split, 
+.file-name-container-img,
+.file-name-container-docs,
+.file-name-container-html,
+.file-name-container-excel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 8px 8px 16px;
+    gap: 16px;
+    background-color: #F9F9F9;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    width: 205.58px;
+    height: 45px;
+    margin-left: 2rem;
+}
+
+.fileicon {
+    background-color: transparent;
+    color: #848080;
+    font-size: 25px;
+    z-index: 1;
+}
+
+.remove-file-btn, 
+.remove-file-btn-split, 
+.remove-file-btn-img,
+.remove-file-btn-docs,
+.remove-file-btn-html,
+.remove-file-btn-excel {
+    background: black;
+    border-style: solid;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    padding-left: 1.5px;
+    padding-bottom: 1px;
+    width: 15px;
+    height: 15px;
+    z-index: 99;
+    font-size: 10px;
+    color: white;
+    margin-left: 10px;
+}
+
+.files-container, 
+.files-container-split, 
+.files-container-img,
+.files-container-docs,
+.files-container-html,
+.files-container-excel {
+    width: auto;
+    height: 160px;
+    max-height: 160px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    margin-top: 20px;
+}
+
+.mergebtn, 
+.splitbtn, 
+.imgbtn,
+.htmlbtn,
+.docsbtn {
+    padding: 8px 10px;
+    gap: 4px;
+    margin: 0 auto;
+    width: 160px;
+    height: 40px;
+    background: #EA2929;
+    border-radius: 8px;
+    border-style: none;
+    margin-left: -12.5rem;
+    margin-top: 12rem;
+    color: white;
+    cursor: pointer;
+}
+
+.excelbtn {
+    padding: 8px 10px;
+    gap: 4px;
+    width: 171px;
+    height: 40px;
+    background: #EA2929;
+    border-radius: 8px;
+    border-style: none;
+    margin-left: -13rem;
+    margin-top: 10rem;
+    color: white;
+    cursor: pointer;
+}
+
+.excelbtn2 {
+    padding: 8px 10px;
+    gap: 4px;
+    margin: 0 auto;
+    width: 175px;
+    height: 40px;
+    background: #EA2929;
+    border-radius: 8px;
+    border-style: none;
+    margin-left:  -10.7rem;;
+    margin-top: 10rem;
+    color: white;
+    cursor: pointer;
+}
+
+.splitbtn,
+.imgbtn,
+.docsbtn,
+.htmlbtn,
+.excelbtn {
+    margin-top: 9rem;
+}
+
+.selected-file-split, 
+.selected-file-img,
+.selected-file-html,
+.selected-file-docs {
+    margin-top: 4rem;
+}
+
+.selected-file-excel {
+    margin-top: 2rem;
+}
+
+.aretex {
+    width: 30rem;
+    margin-top: 9rem;
+    margin-left: 0rem;
+    margin-bottom: 1rem;
+}
+
+.download {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 10px;
+    gap: 4px;
+    color: white;
+    width: 160px;
+    height: 40px;
+    border-style: none;
+    background: #EA2929;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 5.5rem;
+    margin-left: 4rem;
+}
+
+.backbtn {
+    cursor: pointer;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 8.5rem;
+    margin-left: -8.8rem;
+}
+
+.whole-content {
+    margin-left: 5rem;
+    margin-top: -6rem;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    height: 120vh;
+    margin-right: 1rem;
+}
+
+.htmlSelect {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 10px;
+    gap: 4px;
+    color: white;
+    width: 160px;
+    height: 31px;
+    border-style: none;
+    background: #EA2929;
+    cursor: pointer;
+    margin-top: 3.5rem;
+    margin-left: 5rem;
+}
+
+.btnselect.html {
+    margin-left: -10rem;
+}
+
+.lblIF {
+    margin-left: -5.5rem;
+}
