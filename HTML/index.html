@@ -17,7 +17,7 @@
 <body>
     <!-----------------------------NAVIGATION BAR--------------------------------------------->
     <div class="nav">
-        <a class="icons" onclick="homeIn()"><i class="fa-solid fa-house"></i></a>
+        <a class="icons" onclick="homeIn()"><i class="fa-solid fa-house home"></i></a>
         <a class="icons" onclick="popAuth()"><i class="fa-solid fa-gear gear"></i></a>
     </div>
     <!----------------------------------------------------------------------------------------->
@@ -304,17 +304,21 @@
             document.getElementById('auth').classList.add('popup');
             document.getElementById('auth').classList.remove('popout');
             document.getElementById('auth').style.display = 'block';
-            document.querySelector('.gear').style.color = '#EF8B16'
+            document.querySelector('.gear').style.color = '#EF8B16';
+            document.querySelector('.home').style.color = 'white';
         }
 
         function authOut() {
             document.getElementById('auth').classList.add('popout');
             document.getElementById('auth').classList.remove('popup');
             document.querySelector('.gear').style.color = 'white';
+            document.querySelector('.home').style.color = '#EF8B16';
         }
 
         function homeIn() {
             document.getElementById('auth').classList.add('popout');
+            document.querySelector('.gear').style.color = 'white';
+             document.querySelector('.home').style.color = '#EF8B16';
         }
     </script>
 

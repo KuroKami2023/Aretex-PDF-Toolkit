@@ -1,5 +1,6 @@
 //secret.js
 const { MongoClient } = require('mongodb');
+const { size } = require('pdfkit/js/page');
 const { v4: uuidv4 } = require('uuid'); 
 
 const uri = "mongodb+srv://aretexIT:iFaYfNi3L4sOGegR@aretex.i5ddvp5.mongodb.net/pdfToolkitDB";
@@ -39,9 +40,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             user_input.disabled = true;
             btnsub.style.display = 'none';
             Swal.fire({
-                position: "center",
+                position: "bottom-right",
                 icon: "success",
-                title: "API key is valid. Access Granted.",
+                text: "Authenticated",
                 showConfirmButton: false,
                 timer: 1500
             });
